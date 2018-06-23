@@ -26,6 +26,7 @@ class Application
       cart_item = req.params["item"]
       if @@items.include?(cart_item)
         @@cart << cart_item
+        resp.write "Added #{cart_item}"
       else resp.write "Error"
       end
     else
