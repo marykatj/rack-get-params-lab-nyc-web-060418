@@ -21,13 +21,12 @@ class Application
     elsif req.path.match(/add/)
       item_search = req.params["item"]
       if @@items.include?(item_search)
-        @@cart >> item_search
+        @@cart << item_search
       else resp.write "Error"
       end
     else
       resp.write "Path Not Found"
     end
-end
     resp.finish
   end
 
