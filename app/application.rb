@@ -22,8 +22,8 @@ class Application
           end
       else "Your cart is empty"
     elsif req.path.match(/add/)
-      item_search = req.params["item"]
-      if @@items.include?(item_search)
+      cart_item = req.params["item"]
+      if @@items.include?(cart_item)
         @@cart << item_search
       else resp.write "Error"
       end
