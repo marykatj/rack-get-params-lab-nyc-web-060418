@@ -20,7 +20,7 @@ class Application
           @@cart.each do |cart_item|
           resp.write "#{cart}\n"
           end
-      else "Your cart is empty"
+      else resp.write "Your cart is empty"
       end
     elsif req.path.match(/add/)
       cart_item = req.params["item"]
