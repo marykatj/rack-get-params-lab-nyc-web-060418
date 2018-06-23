@@ -18,6 +18,9 @@ class Application
     elsif req.path.match(/cart/)
       @@cart.each do |cart_item|
       resp.write "#{cart}\n"
+    elsif req.path.match(/add/)
+      item_search = req.params["item"]
+
     else
       resp.write "Path Not Found"
     end
