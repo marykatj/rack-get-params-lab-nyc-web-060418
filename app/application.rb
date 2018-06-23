@@ -23,7 +23,7 @@ class Application
       if @@items.include?(item_search)
         @@cart >> item_search
       else resp.write "Error"
-
+      end
     else
       resp.write "Path Not Found"
     end
